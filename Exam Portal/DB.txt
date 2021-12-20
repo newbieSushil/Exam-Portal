@@ -1,0 +1,25 @@
+create table test(id int, question varchar(2000),option_1 varchar(500),option_2 varchar(500),option_3 varchar(500),option_4 varchar(500),answer varchar(2000));
+
+insert into test values(1,'Sample question','option 1','option 2','option 3','option 4','sample answer');
+
+insert into test values(2,'Sample question','option 1','option 2','option 3','option 4','sample answer');
+
+insert into test values(3,'Sample question','option 1','option 2','option 3','option 4','sample answer');
+
+create table teacher(email varchar(50),password varchar(100));
+
+
+insert into teacher values('abhishekmore710@gmail.com','1234');
+insert into teacher values('sushil1wagh@gmail.com','1234');
+
+select * from test;
+
+delete from test where id=2;
+SET SQL_SAFE_UPDATES = 0;
+
+create table student( prn varchar(50), pwd varchar(100));
+
+insert into student values ('31','1234');
+insert into student values ('37','1234');
+
+select * from student;

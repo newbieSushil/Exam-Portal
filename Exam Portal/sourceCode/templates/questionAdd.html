@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question Add Page</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+    
+
+
+<body class="container " style="color:black;background-color:#F0F8FF;">
+    <br><br><br><br>
+ <div class="jumbotron" style="background-color:powderblue;">
+    <form form action = "/CreateQuestion" method = "post" enctype="multipart/form-data"><br><br><br><br><br>
+        
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Upload</span>
+            </div>
+            <div class="custom-file">
+                <label for="img" class="custom-file-label">Choose file</label>
+                <input class="custom-file-input" type="file" id="img" name="question" accept="image/*"><br><br>
+            </div>
+        </div>
+        
+        <label for="option1">answer</label>
+        <input class="form-control form-control-lg" type="text" id="answer" name="answer" value="" placeholder="Enter ontion1">
+        <br>
+
+        <label for="option1">option1</label>
+        <input class="form-control form-control-lg" type="text" id="option1" name="option1" value="" placeholder="Enter ontion1">
+        <br>
+
+        <label for="option1">option1</label>
+        <input class="form-control form-control-lg" type="text" id="option2" name="option2" value="" placeholder="Enter ontion1">
+        <br>
+
+        <label for="option1">option1</label>
+        <input class="form-control form-control-lg" type="text" id="option3" name="option3" value="" placeholder="Enter ontion1">
+        <br>
+
+        <label for="option1">option1</label>
+        <input class="form-control form-control-lg" type="text" id="option4" name="option4" value="" placeholder="Enter ontion1">
+        <br>
+        <button class="btn btn-success btn-lg">Add Question</button>
+    </form>
+</div>
+</body>
+</html>

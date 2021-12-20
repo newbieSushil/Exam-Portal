@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Student Login</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+    <body class="container" style="color:black;background-color:#F0F8FF;">
+        <br><br><br><br>
+        <div class="jumbotron"style="background-color:powderblue;">
+  
+            <form action="{{url_for('check_student_credentials')}}" method="post">
+                <h4 style="color:red;"> {{message}}</h4>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">PRN No.</label>
+                    <input type="text" name="prn" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your PRN here">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+      
+ 
+    </body>
+</html>

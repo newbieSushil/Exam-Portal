@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body onload="setTimeout(myFunction, 200000);" class="container " style="color:black;background-color:#F0F8FF;">
+    <div class="jumbotron" style="background-color:powderblue;">
+        <div class="card" style="color:black;background-color:#F0F8FF;">
+            <div class="card-header  text-center">
+                <h1>All the questions are as below</h1>
+            </div>
+    
+        </div>
+        <br><br>
+            
+
+            {%for i in range(noq):%}
+                <p><span class="badge badge-secondary">{{i + 1}}</span> {{question_paper[i][1]}}</p>
+                
+                <div class="card" style="color:black;background-color:#F0F8FF;">
+                <img class="card-img-top" src=  "static/{{question_paper[i][1]}}"><br>
+                <div class="card-header  text-center">
+                    <h1>Options are as follow: </h1>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{question_paper[i][2]}}</h5>
+                    <h5 class="card-title">{{question_paper[i][3]}}</h5>
+                    <h5 class="card-title">{{question_paper[i][4]}}</h5>
+                    <h5 class="card-title">{{question_paper[i][5]}}</h5>
+                </div>
+                
+            </div>
+
+                
+                <br>
+              
+            {%endfor%}
+            
+    </div>
+    
+</body>
+
+<script>
+    function myFunction(){
+        document.getElementById("myForm").submit();
+        alert("form submitted");
+    }
+</script>
+
+</html>

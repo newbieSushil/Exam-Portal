@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IMAGE BASED SEARCH</title>
+	<style>
+		.button {
+  			background-color: blue; /* Green */
+  			border: none;
+  			color: white;
+  			padding: 15px 32px;
+  			text-align: center;
+  			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+		}
+
+
+		body{
+			background-color: powderblue;
+		}
+
+	form{
+			text-align: center;
+		}
+
+		h1{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>IMAGE BASED SEARCH</h1>
+
+	<form form action = "/CreateQuestion" method = "post" enctype="multipart/form-data"><br><br><br><br><br>
+  		<label for="img"><b>Upload Image:</b></label>
+  		<input type="file" id="img" name="img" accept="image/*"><br><br>
+  		<button class="button">Submit</button>
+	</form>
+</body>
+</html>

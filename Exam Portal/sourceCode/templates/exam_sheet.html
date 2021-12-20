@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body onload="setTimeout(myFunction, 200000);" class="container " style="color:black;background-color:#F0F8FF;">
+    <div class="jumbotron" style="background-color:powderblue;">
+        <div class="card" style="color:black;background-color:#F0F8FF;">
+            <div class="card-header  text-center">
+                <h1>Instructions</h1>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Instructions 1</h5>
+                <h5 class="card-title">Instructions 2</h5>
+                <h5 class="card-title">Instructions 3</h5>
+                <h5 class="card-title">Instructions 4</h5>
+            </div>
+            
+        </div>
+        <br><br>
+        
+        <form id="myForm" action= "{{url_for('complete')}}" method="post">
+
+            <input type="hidden" name="prn" value={{PRN}}>
+
+            {%for i in range(noq):%}
+                <p><span class="badge badge-secondary">{{i + 1}}</span> {{question_paper[i][1]}}</p>
+                
+                <div class="card" style="color:black;background-color:#F0F8FF;">
+                    <img class="card-img-top" src=  "static/{{question_paper[i][1]}}"><br>
+                    <div class="card-header  text-center">
+                        <h1>Options are as follow: </h1>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <input type="radio" id="option1" name={{question_paper[i][0]}} value="2">
+                            <label for="option1">{{question_paper[i][2]}}</label><br>
+                        </h5>
+                        <h5 class="card-title">
+                            <input type="radio" id="option2" name={{question_paper[i][0]}} value="3">
+                            <label for="option2">{{question_paper[i][3]}}</label><br>
+                        </h5>
+
+                        <h5 class="card-title">
+                            <input type="radio" id="option3" name={{question_paper[i][0]}} value="4">
+                            <label for="option3">{{question_paper[i][4]}}</label><br>
+                        </h5>
+
+                        <h5 class="card-title">
+                            <input type="radio" id="option1" name={{question_paper[i][0]}} value="5">
+                            <label for="option4">{{question_paper[i][5]}}</label><br>
+                        </h5>
+                    </div>
+                </div>
+                <br><br>
+
+            {%endfor%}
+            
+            <button type="submit" class="btn btn-danger">submit test</button>
+        </form>
+    </div>
+    
+</body>
+
+<script>
+    function myFunction(){
+        document.getElementById("myForm").submit();
+        alert("form submitted");
+    }
+</script>
+
+</html>
